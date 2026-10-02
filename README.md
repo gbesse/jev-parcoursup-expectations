@@ -2,7 +2,7 @@
 
 **Compare un profil candidat aux attendus publiés d’une formation Parcoursup.**
 
-[![Tests](https://github.com/gbesse/jev-parcoursup-expectations/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-parcoursup-expectations/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.1 · Documentation française
+[![Tests](https://github.com/gbesse/jev-parcoursup-expectations/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-parcoursup-expectations/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.2 · Documentation française
 
 Jev Parcoursup Expectations transforme un comparaison de candidature sourcé en une catégorie explicite et révisable. Le dépôt sépare les règles vérifiables en code de la comparaison sémantique confiée à Jev.
 
@@ -99,6 +99,12 @@ TYPESAFE_API_KEY=... node scripts/live-smoke.mjs
 ```
 
 N’envoyez jamais de secret, de donnée personnelle ni de dossier sensible non expurgé. Calibrez les seuils sur un corpus français annoté avant tout usage opérationnel.
+
+## Parcours comparatif
+
+`npm run demo:parcours` produit un rapport JSON partageable pour **jev-parcoursup-expectations** : le scénario principal et la frontière déterministe, ainsi que la revue humaine. Chaque scénario garde sa sortie propre et échoue si son assertion ne passe plus. Les données et probabilités sont synthétiques ; aucun appel Jev n’est effectué.
+
+Cette vue permet de comparer rapidement les chemins de décision et de choisir quel exemple adapter à vos propres données sourcées.
 
 ## Validation
 
